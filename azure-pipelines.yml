@@ -34,7 +34,7 @@ stages:
         azureResourceGroup: 'k8s-learning'
         kubernetesCluster: 'learninig'
         namespace: 'test'
-        command: 'apply'
+        command: 'delete'
         arguments: '-f $(MANIFEST_PATH)'
 #        secretType: 'dockerRegistry'
 #        containerRegistryType: 'Azure Container Registry'
