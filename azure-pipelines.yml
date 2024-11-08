@@ -8,7 +8,7 @@ pool:
 
 variables:
   # Define variables to avoid hardcoding
-  MANIFEST_PATH: 'nginx-deployment.yaml'  # Path to your Kubernetes manifest file
+  MANIFEST_PATH: 'dashboard/influxdb.yaml'  # Path to your Kubernetes manifest file
 
 stages:
 - stage: Deploy
@@ -33,8 +33,8 @@ stages:
         azureSubscriptionEndpoint: 'azure-devops-service-principal'
         azureResourceGroup: 'k8s-learning'
         kubernetesCluster: 'learninig'
-        namespace: 'test'
-        command: 'delete'
+        namespace: 'kube-system'
+        command: 'create'
         arguments: '-f $(MANIFEST_PATH)'
 #        secretType: 'dockerRegistry'
 #        containerRegistryType: 'Azure Container Registry'
