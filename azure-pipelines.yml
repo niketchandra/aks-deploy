@@ -1,4 +1,4 @@
-trigger:
+etetrigger:
   branches:
     include:
       - main  # Set this to the branch you want to trigger the pipeline
@@ -34,7 +34,7 @@ stages:
         azureResourceGroup: 'k8s-learning'
         kubernetesCluster: 'learninig'
         namespace: 'kube-system'
-        command: 'create'
+        command: 'delete'
         arguments: '-f $(MANIFEST_PATH)'
 #        secretType: 'dockerRegistry'
 #        containerRegistryType: 'Azure Container Registry'
