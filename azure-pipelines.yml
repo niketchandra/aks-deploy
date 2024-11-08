@@ -1,4 +1,4 @@
-etetrigger:
+trigger:
   branches:
     include:
       - main  # Set this to the branch you want to trigger the pipeline
