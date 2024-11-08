@@ -17,12 +17,11 @@ stages:
   - job: DeployToAKS
     displayName: "Deploy NGINX to AKS"
     steps:
-    
     - task: AzureCLI@2
       displayName: 'Set up AKS context'
       inputs:
         azureSubscription: 'azure-devops-service-principal'
-        scriptType: 'batch'
+        scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: 'az aks get-credentials --resource-group k8s-learning --name learninig'
 
